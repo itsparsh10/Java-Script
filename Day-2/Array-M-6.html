@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+<script>
+        function example1()
+        {
+            alert("Objects 1");
+            var obj=
+            {
+                Model:"Realme",
+                Price:8000,
+                CamResolution:"48px"
+            }
+            alert(obj.Model);
+            obj.Model="Jio";
+            alert(obj["Model"]);
+            alert(obj.Price);
+            alert(obj.CamResolution);
+        }
+        function example2()
+        {
+            alert("Objects 2");
+        }
+        function example3()
+        {
+            alert("Objects 3");
+        }
+        function example4()
+        {
+            alert("Objects 4");
+        }
+</script>
+
+    <input type="button" onclick="example1()" value="Object1"><br>
+    <input type="button" onclick="example2()" value="Object2"><br>
+    <input type="button" onclick="example3()" value="Object3"><br>
+    <input type="button" onclick="example4()" value="Object4"><br>
+</body>
+</html>

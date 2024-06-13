@@ -1,0 +1,25 @@
+<!-- // Write  simple javascript with HTML for arithmetic expression evaluation & message printing -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Expression Evaluator</title>
+</head>
+<body>
+    <h2>Arithmetic Expression Evaluator</h2>
+    <input type="text" id="expression" placeholder="Enter arithmetic expression">
+    <button onclick="evaluateExpression()">Evaluate</button>
+    <p id="result"></p>
+
+    <script>
+        function evaluateExpression() {
+            const expression = document.getElementById('expression').value;
+            try {
+                const result = eval(expression);
+                document.getElementById('result').innerText = `Result: ${result}`;
+            } catch (error) {
+                document.getElementById('result').innerText = 'Invalid expression';
+            }
+        }
+    </script>
+</body>
+</html>

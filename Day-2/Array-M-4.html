@@ -1,0 +1,55 @@
+<html>
+ <body>
+  <script>
+   function arr1(){ 
+   {alert("Array Method 1")
+   data=[1,true,"Ironman","navi mumbai","Kharghar"];
+   alert(data.length);
+   var ctr=0;
+   while(ctr<data.length)
+   {
+    alert(data[ctr]);
+    ctr++;
+   }
+   ans=data.reverse();
+   alert(ans.toString());
+   alert(ans[3]);
+  }
+  };
+   function arr2()
+   {alert("Array Method 2")
+  var data = new Array(10);
+  document.write("<hr>")
+  data.push("Mumbai");
+  document.write("The length of the array is "+data.length);
+  document.write("<hr>")
+  document.write(data.toString());
+  document.write("<hr>")
+  data.pop();
+  data.pop();
+  document.write("<hr>");
+  document.write("The array after pop is ");
+  document.write(data.toString());
+  };
+   function arr3()
+   {alert("Array Method 3")
+  let data=new Array();
+  data[0]="Monday";
+  data[1]="Tuesday";
+  data.push("wednesday");
+  data.push("Thursday");
+  for (x in data){
+   document.write("<p style='color:red; font-size:2em'>");
+   document.write(x);
+   document.write("</p>");
+       }
+  }
+  </script>
+  <input type="button" onclick="arr1()" value="Array1">
+  <br>
+  <input type="button" onclick="arr2()" value="Array2">
+  <br>
+  <input type="button" onclick="arr3()" value="Array3">
+  <br>
+ </body>
+</html>
