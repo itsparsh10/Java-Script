@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script>
+            function dom1()
+            {
+                alert("dom 1");
+                var x=document.getElementById("d1");
+                alert(x.childNodes.length);
+                alert(x.childNodes.item(1).childNodes.item(0).nodeValue);
+                alert(x.childNodes.item(1).innerHTML);
+            }
+            function dom2()
+            {
+                alert("dom 2");
+                var x=document.getElementById("d1");
+                x.childNodes.item(7).childNodes.item(0).nodeValue="Tanmay";
+                alert(x.childNodes.item(7).childNodes.item(0).nodeValue);
+            }
+            function dom3()
+            {
+                alert("dom 3");
+                var x=document.getElementById("d1");
+                x.childNodes.item(1).setAttribute("class","note")
+            }
+            function dom4()
+            {
+                var x=document.getElementById("d1");
+                var y=x.childNodes.item(7).getAttribute("class");
+                if(y=="bright")
+                    x.childNodes.item(7).setAttribute("class","note");
+                else
+                    if(y=="note")
+                    {
+                        x.childNodes.item(7).setAttribute("class","bright");
+                    }
+            }
+        </script>
+        <style>
+            .note{
+                background-color:rgb(72, 211, 72);
+                color:white;
+                font-size: 2em;
+            }
+            .bright{
+                background-color:yellow;
+                color:white;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+            <p>Jeevan</p>
+            <p>Garvit</p>
+            <p>Gaurang</p>
+            <p class="bright">Tanay</p>
+        </div>
+        <input type="button" onclick="dom1()" value="dom1">
+        <input type="button" onclick="dom2()" value="dom2">
+        <input type="button" onclick="dom3()" value="dom3">
+        <input type="button" onclick="dom4()" value="dom4">
+    </body>
+</html>

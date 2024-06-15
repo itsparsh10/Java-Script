@@ -1,0 +1,53 @@
+<!-- 2.JavaScript to use decision making & looping statements -->
+<html>
+
+<head>
+    <title>Experiment 2</title>
+</head>
+
+<body>
+    <script>
+        function negativePositive() {
+            num1 = parseInt(prompt("Enter a number to check whether it is negative or positive"));
+            if (num1 > 0) {
+                alert(num1 + " is a positive number");
+            } else if (num1 < 0) {
+                alert(num1 + " is a negative number");
+            }
+            else {
+                alert(num1 + " is zero");
+            }
+        }
+        function oddEven() {
+            num1 = parseInt(prompt("Enter a number to check whether it is odd or even"));
+            var ans = num1 % 2 == 0;
+            switch (ans) {
+                case false:
+                    alert(num1 + " is an odd number");
+                    break;
+                case true:
+                    alert(num1 + " is an even number");
+                    break;
+                default:
+                    alert("Invalid number");
+            }
+        }
+        function sumArray() {
+            var num1 = prompt("Enter the size of array");
+            var sum = 0;
+            var arr = [];
+            for (let i = 0; i < num1; i++) {
+                arr[i] = parseInt(prompt("Enter the element"));
+                sum += arr[i];
+            }
+            alert("Sum of elements of array: " + sum);
+        }   
+    </script>
+    <input type="button" value="Check for Negative or Positive Number" onclick="negativePositive();">
+    <input type="button" value="Check for Odd or Even Number" onclick="oddEven();">
+    <input type="button" value="Sum of elements of array" onclick="sumArray();">
+    <input type="button" value="Check for Negative or Positive Number" onclick="negativePositive();">
+    <input type="button" value="Check for Negative or Positive Number" onclick="negativePositive();">
+</body>
+
+</html>

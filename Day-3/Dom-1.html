@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Dom Id Length</title>
+    <style>
+        .note {
+            background-color: rgb(6, 164, 32);
+            color: white;
+            font-size: 2em;
+        }
+
+        .bright {
+            background-color: green;
+            color: yellow;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <p>Jeevan</p>
+        <p>Garvit</p>
+        <p>Gaurang</p>
+        <p>Tanay</p>
+    </div>
+    <input type="button" value="dom1" onclick="dom1();">
+    <input type="button" value="dom2" onclick="dom2();">
+    <input type="button" value="dom3" onclick="dom3();">
+    <input type="button" value="dom4" onclick="dom4();">
+    <script>
+        function dom1() {
+            alert("dom1");
+            var x = document.getElementById("d1");
+            alert(x.childNodes.length); // returns 9 as along with 4 p tags, there are 5 text nodes(whitespaces) in between the p tags and before it and before </div> tag
+            alert(x.childNodes.item(5).childNodes.item(0).nodeValue); // core dom example, will print value of first node in the node list of the 6th node in x
+            alert(x.childNodes.item(5).innerHTML); // html dom example, will give same output as the above line
+        }
+        function dom2() {
+            alert("dom2");
+            var x = document.getElementById("d1");
+            x.childNodes.item(7).childNodes.item(0).nodeValue = "Tanmay"; // change the value of the first node in the nodelist of the 6th node in the nodelist of x
+            alert(x.childNodes.item(7).childNodes.item(0).nodeValue); // print the modified value
+        }
+        function dom3() {
+            alert("dom3");
+            var x=document.getElementById("d1");
+            x.childNodes.item(1).setAttribute("class","note");
+        }
+        function dom4() {
+            alert("dom4");
+
+        }
+    </script>
+</body>
+
+</html>

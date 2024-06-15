@@ -1,0 +1,14 @@
+<html>
+    <script>
+        function data(num1, num2) {
+            alert(num1);
+            alert(num2);
+            return function() {
+                alert('We will perform Calculation on ' + num1 + ' And ' + num2);
+            };
+        }
+        </script>
+    <body>
+        <input type="button" onclick="data(12, 23)()" value="return Function">
+    </body>
+</html>

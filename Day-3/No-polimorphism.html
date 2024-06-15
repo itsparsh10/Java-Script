@@ -1,0 +1,35 @@
+<!-- in java script there is no function overloading and polymorphism  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function add(num1,num2){
+        alert("hi")
+    }
+    function add(num1,num2,num3){
+        alert("Nameste")
+    }
+    function add(num1,num2,num3,num4){
+        alert("Bonjour")
+    }
+    function add(num1){
+        alert("Hola")
+    }
+    
+    
+    
+</script>
+<input type="button" onclick="add(12)" value="add1">
+<input type="button" onclick="add(1,2)" value="add2">
+<input type="button" onclick="add(1,2,3)" value="add3">
+<input type="button" onclick="add(1,2,3,4)" value="add4">
+<input type="button" onclick="add(1,2,3,4,6)" value="add5">
+
+</html>

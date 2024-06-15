@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Decision Making Page</title>
+<style>
+  .button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 24px;
+    background-color: rgb(226, 165, 43);
+    color: white;
+  }
+  #output {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #1b1616;
+    min-height: 50px;
+  }
+</style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<center><button class="button" onclick="forLoop()">For Loop</button>
+<button class="button" onclick="whileLoop()">While Loop</button>
+<button class="button" onclick="doWhileLoop()">Do While Loop</button>
+<button class="button" onclick="forInLoop()">For In Loop</button>
+<button class="button" onclick="ifElseStatement()">If Else Statement</button></center>
+
+<div id="output"></div>
+
+<script>
+function forLoop() {
+  let result = 'For Loop: ';
+  for (let i = 1; i <= 5; i++) {
+    result += i + ' ';
+  }
+  document.getElementById('output').innerText = result;
+}
+
+function whileLoop() {
+  let i = 1, result = 'While Loop: ';
+  while (i <= 7) {
+    result += i + ' ';
+    i++;
+  }
+  document.getElementById('output').innerText = result;
+}
+
+function doWhileLoop() {
+  let i = 1, result = 'Do While Loop: ';
+  do {
+    result += i + ' ';
+    i++;
+  } while (i <= 10);
+  document.getElementById('output').innerText = result;
+}
+
+function forInLoop() {
+  const obj = {a: 1, b: 2, c: 3, d: 4,e: 5,f: 6};
+  let result = 'For In Loop: ';
+  for (const key in obj) {
+    result += key + ' ';
+  }
+  document.getElementById('output').innerText = result;
+}
+
+function ifElseStatement() {
+  let time = new Date().getHours();
+  let greeting;
+  if (time < 12) {
+    greeting = "Good morning";
+  } else if (time < 18) {
+    greeting = "Good afternoon";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById('output').innerText = greeting;
+}
+</script>
+
+</body>
+</html>

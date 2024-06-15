@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Payments</title>
+    </head>
+    <body>
+        <script>
+            function upi(mfrom, mto, amount, fun1)
+            {
+                if(mfrom==null||mto==null||amount==null)
+                {
+                    fun1("ERROR")
+                }
+                else{
+                    fun1("SUCCESS")
+                }
+            }
+            function bhimupi(m1, m2, amt)
+            {
+                upi(m1, m2, amt, function(a)
+                    {
+                        if(a.toLowerCase()=="success")
+                            document.write("<p style='color:green'>Payment Done</p>")
+                        else
+                            if(a.toLowerCase()=="error")
+                                document.write("<p style='color:red'>ERROR</p>")
+                            else
+                                document.write("UNKNOWN")
+                    });
+            }
+            function gpay(m1, m2, amt)
+            {
+                upi(m1, m2, amt, function(a)
+                    {
+                        if(a.toLowerCase()=="success")
+                            document.write("<img src='https://zeuxinnovation.com/wp-content/uploads/2023/04/maximising-user-satisfaction-1.jpg' style='background-size:cover;'>")
+                        else
+                            if(a.toLowerCase()=="error")
+                                document.write("<img src='https://forum.fairphone.com/uploads/default/original/3X/9/3/9374790262c47d1233a3b3ed5f39a982a56d9540.png' style='background-size:cover;'>")
+                            else
+                                document.write("UNKNOWN")
+                    });
+            }
+            function phonepe(m1, m2, amt)
+            {
+                upi(m1, m2, amt, function(a)
+                    {
+                        if(a.toLowerCase()=="success")
+                            document.write("<img src='https://content.phonepe.com/ppcms/media/filer_public_thumbnails/filer_public/c5/bd/c5bd2599-d51b-4503-907c-098aa101cf8e/success_-_recharge_-_cardwallet.png__200x400_q85_subsampling-2.png' style='background-size:cover;'>")
+                        else
+                            if(a.toLowerCase()=="error")
+                                document.write("<img src='https://pbs.twimg.com/media/DO1cPX0VwAEtZjk?format=jpg&name=4096x4096' style='background-size:cover;'>")
+                            else
+                                document.write("UNKNOWN")
+                    });
+            }
+        </script>
+        <h1>BHIM UPI</h1>
+        <input type="button" onclick="bhimupi(null, null, 9000)" value="BHIM NULL">
+
+        <input type="button" onclick="bhimupi(1234567890, 9876543201, 20000)" value="BHIM 20000">
+        <h1>Gpay UPI</h1>
+        <br>
+        <input type="button" onclick="gpay(null, null, 9000)" value="GPAY NULL">
+        <input type="button" onclick="gpay(1234567890, 9876543201, 20000)" value="GPAY 20000">
+        <br>
+        <h1>Phonepe UPI</h1>
+        <input type="button" onclick="phonepe(null, null, 9000)" value="phonepe NULL">
+       
+        <input type="button" onclick="phonepe(1234567890, 9876543201, 20000)" value="phonepe 20000">
+        <br>
+    </body>
+</html>
