@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Let variable(block scope)</title>
+</head>
+
+<body>
+    <script>
+        function fun1() {
+            alert("Hi from fun1");
+            {
+                var ans = 99;
+            }
+            alert(ans);
+            alert("Bye from fun1");
+        }
+        function fun2() {
+            alert("Namaste from fun2");
+            {
+                let result = 97;
+            }
+            alert(result);
+            alert("Bye from fun2");
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <center><button onclick="fun1()">var keyword</button>
+        <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <button onclick="fun2()">let keyword</button></center>
+</body>
+
+</html>
